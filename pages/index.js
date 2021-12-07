@@ -1,4 +1,5 @@
 import Head from "next/head";
+import FamousPlaces from "../components/FamousPlaces";
 import SearchBox from "../components/SearchBox";
 
 export default function Home() {
@@ -9,7 +10,8 @@ export default function Home() {
       </Head>
       <div className="home">
         <div className="container">
-          <SearchBox />
+          <SearchBox placeholder='Search for a city or town...' />
+          <FamousPlaces />
         </div>
       </div>
     </div>

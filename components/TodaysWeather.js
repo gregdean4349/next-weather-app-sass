@@ -11,12 +11,12 @@ export default function TodaysWeather({ city, weather, timezone }) {
       <div className="today__inner">
         <div className="today__left-content">
           <h1>
-            {city.name}, {city.state}
+            {city.name}, {city.state}. ({city.country})
           </h1>
 
           <h2>
-            <span>{weather.temp.max.toFixed(0)} &deg;F</span>
-            <span>{weather.temp.min.toFixed(0)} &deg;F</span>
+            <span>{weather.temp.max.toFixed(0)}&deg;F</span>
+            <span>{weather.temp.min.toFixed(0)}&deg;F</span>
           </h2>
 
           <div className="today__sun-times">
@@ -39,7 +39,7 @@ export default function TodaysWeather({ city, weather, timezone }) {
             <div>
               <Image
                 src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-                alt="weather icon"
+                alt={weather.weather[0].description}
                 layout="fill"
               />
               {/* Icon */}
